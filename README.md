@@ -1,1 +1,1 @@
-# SD2-SelfLeaningLLM
+# SD2-SelfLearningLLM
