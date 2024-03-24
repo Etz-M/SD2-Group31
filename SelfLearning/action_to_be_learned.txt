@@ -1,4 +1,0 @@
-Move the robotic arm left.
-Move the robotic arm right.
-Move the robotic arm up.
-Move the robotic arm down.
