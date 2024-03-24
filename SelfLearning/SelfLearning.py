@@ -30,8 +30,16 @@ print("--------------------- Hello llama ---------------------")
 
 #Gather actions to be learned
 tasks = GatherTasks()
+# print(tasks)
+
+# tasks = UpdateTasks(tasks, tasks[3], 10)
+# print(tasks)
+# tasks = UpdateTasks(tasks, tasks[1], 10)
+# print(tasks)
+
 
 # Instantiate the model (TODO)
+
 
 
 '''
@@ -39,6 +47,8 @@ Begin with the initial training of the model, purposed with giving the model som
   context of what it is being trained on and what its objective is.
   NOTE: only necessary if this is the first time running the script or training the 
         the model at relavent task (AKA continueing prior training). Otherwise, comment the line out.
+'''
+
 '''
 InitiateTrainingContext()
 
@@ -56,7 +66,7 @@ for task in tasks:
         
         #send the command to the arm
         print("Model generated: " + response)
-        CommandToArm(response)
+        CommandToArm_Linux(response)
 
         #Recieve what happened from the computer vision software
         #   NOTE: will perhaps have to implement some kind of wait/sleep/asynchronous
@@ -84,7 +94,7 @@ for task in tasks:
     #End of while, task learned. Try next task or end training.
 
 
-
+'''
 
 # Train the model to complete each of the tasks
 

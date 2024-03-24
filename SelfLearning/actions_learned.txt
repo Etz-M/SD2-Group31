@@ -1,0 +1,2 @@
+Move the robotic arm down.	 - 10 iterations
+Move the robotic arm right.	 - 10 iterations
