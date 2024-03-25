@@ -17,6 +17,12 @@ Description : This script will provide SelfLearning.py with the helper functions
 ------------------------------------------------------------------------------
 """
 
+
+import fire
+from llama import Llama, Dialog
+
+
+
 def InitiateTrainingContext():
     """
     Will train the model with the context needed to begin generating attempts to accomplish task.
@@ -62,6 +68,7 @@ def ReinforceModel():
     """
     print("TODO: train llama based on positive or negative feedback")
 
+
 def EvaluateModel(task, currentPosition):
     """
     Have the model generate a prompt to attempt to complete current task at hand.
@@ -74,7 +81,7 @@ def EvaluateModel(task, currentPosition):
         response (str) : response from the model.
     """
     # generate the prompt
-    strToModel = "The current position of " + currentPosition + ". " + task
+    prompt = "The current position of " + currentPosition + ". " + task
 
     #TODO: send the prompt to the model
     # --------------------------- NEED TO FIGURE OUT SEND PROMPTS TO LLAMA ---------------------------
