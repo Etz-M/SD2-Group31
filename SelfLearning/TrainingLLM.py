@@ -32,6 +32,8 @@ def InitiateTrainingContext():
     prompt = ""
     FineTuneModel(prompt)
 
+    #need to figure out how to initiate LLaMA by looking at the provided code from Meta. (i have locally)
+
 #may be redundant with FineTuneModel() and ReinforceModel()
 def FineTuneModel(prompt):
     """
@@ -44,6 +46,7 @@ def FineTuneModel(prompt):
         TODO
     """
     print("TODO: training function, will actually train the model.")
+    #need to watch the video on using the fine-tuning framework
 
 
 def ReinforceModel():
@@ -59,16 +62,28 @@ def ReinforceModel():
     """
     print("TODO: train llama based on positive or negative feedback")
 
-def EvaluateModel(task):
+def EvaluateModel(task, currentPosition):
     """
     Have the model generate a prompt to attempt to complete current task at hand.
 
     Args:
         task (str) : the task that is currently being evalutated.
+        currentPostion (str) : the current position of the robotic arm. #MAY BE IN THE FORM OF AN INT
     
     Returns:
         response (str) : response from the model.
     """
+    # generate the prompt
+    strToModel = "The current position of " + currentPosition + ". " + task
+
+    #TODO: send the prompt to the model
+    # --------------------------- NEED TO FIGURE OUT SEND PROMPTS TO LLAMA ---------------------------
+
+    #return the response
+
+
+
+
 
 def PositiveReinforcement():
     """
@@ -99,4 +114,3 @@ def NegativeReinforcement():
         message (str) : the concatenated string that will be sent to the model.
     """
     print("TODO: generated the string that will be given to llama as Negative feedback")
-

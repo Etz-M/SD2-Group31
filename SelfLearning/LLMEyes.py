@@ -12,13 +12,13 @@ Description : This script will provide functions that will be used to abstract
 
 def WhatHappened():
     """
-    Will provide the control script with a description of what happened
+    Will provide the control script with a description of what happened. This will be 
+    an asyncronous call to the computer vision script to determine what the robotic arm did.
 
     Args:
         N/A.
     
     Returns:
         result (str) : a simple description of what the robotic arm did.
-
     """
     print("TODO: write this.")

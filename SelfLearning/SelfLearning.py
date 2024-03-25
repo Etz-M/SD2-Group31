@@ -9,7 +9,8 @@ Description : This script will contorl the flow of the self-learning process
   steps of the training.
 
   The use of this script will be generic. This script will repeatively provide the
-  LLM with the task it meant to learn then provide response on what has happened.
+  LLM with the task that is meant to learn then provide response on what has happened
+  to the LLM.
 
   For the self-learning robotic arm use case, the model will be given initial context 
   on what is going on and what it is trying to learn. It will then be given an task from
@@ -30,16 +31,6 @@ print("--------------------- Hello llama ---------------------")
 
 #Gather actions to be learned
 tasks = GatherTasks()
-# print(tasks)
-
-# tasks = UpdateTasks(tasks, tasks[3], 10)
-# print(tasks)
-# tasks = UpdateTasks(tasks, tasks[1], 10)
-# print(tasks)
-
-
-# Instantiate the model (TODO)
-
 
 
 '''
@@ -49,7 +40,7 @@ Begin with the initial training of the model, purposed with giving the model som
         the model at relavent task (AKA continueing prior training). Otherwise, comment the line out.
 '''
 
-'''
+# Instantiate the model (TODO)
 InitiateTrainingContext()
 
 #keep track of number of training iterations
@@ -66,6 +57,7 @@ for task in tasks:
         
         #send the command to the arm
         print("Model generated: " + response)
+        # NOTE: will have to preprocess the response to extract the hex code command
         CommandToArm_Linux(response)
 
         #Recieve what happened from the computer vision software
@@ -94,7 +86,7 @@ for task in tasks:
     #End of while, task learned. Try next task or end training.
 
 
-'''
+
 
 # Train the model to complete each of the tasks
 
